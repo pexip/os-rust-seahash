@@ -1,0 +1,36 @@
+Source: rust-seahash
+Section: rust
+Priority: optional
+Build-Depends: debhelper (>= 12),
+ dh-cargo (>= 25),
+ cargo:native <!nocheck>,
+ rustc:native <!nocheck>,
+ libstd-rust-dev <!nocheck>
+Maintainer: Debian Rust Maintainers <pkg-rust-maintainers@alioth-lists.debian.net>
+Uploaders:
+ Alexander Kjäll <alexander.kjall@gmail.com>
+Standards-Version: 4.5.1
+Vcs-Git: https://salsa.debian.org/rust-team/debcargo-conf.git [src/seahash]
+Vcs-Browser: https://salsa.debian.org/rust-team/debcargo-conf/tree/master/src/seahash
+Rules-Requires-Root: no
+
+Package: librust-seahash-dev
+Architecture: any
+Multi-Arch: same
+Depends:
+ ${misc:Depends}
+Provides:
+ librust-seahash+default-dev (= ${binary:Version}),
+ librust-seahash+use-std-dev (= ${binary:Version}),
+ librust-seahash-4-dev (= ${binary:Version}),
+ librust-seahash-4+default-dev (= ${binary:Version}),
+ librust-seahash-4+use-std-dev (= ${binary:Version}),
+ librust-seahash-4.1-dev (= ${binary:Version}),
+ librust-seahash-4.1+default-dev (= ${binary:Version}),
+ librust-seahash-4.1+use-std-dev (= ${binary:Version}),
+ librust-seahash-4.1.0-dev (= ${binary:Version}),
+ librust-seahash-4.1.0+default-dev (= ${binary:Version}),
+ librust-seahash-4.1.0+use-std-dev (= ${binary:Version})
+Description: Blazingly fast, portable hash function with proven statistical guarantees - Rust source code
+ This package contains the source for the Rust seahash crate, packaged by
+ debcargo for use with cargo and dh-cargo.
