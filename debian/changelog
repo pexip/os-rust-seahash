@@ -1,3 +1,9 @@
+rust-seahash (4.1.0-1pexip1) pexip; urgency=medium
+
+  * Prepare Pexip packaging
+
+ -- Huw Jones <huw@pexip.com>  Fri, 17 Mar 2023 11:55:07 +0000
+
 rust-seahash (4.1.0-1) unstable; urgency=medium
 
   * Package seahash 4.1.0 from crates.io using debcargo 2.5.0
